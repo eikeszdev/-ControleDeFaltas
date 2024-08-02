@@ -8,7 +8,11 @@ public class Falta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idFalta;
-    // infos sobre o aluno
-    // infos sobre a aula
-    // justificativa falta - 2 campos, sim e nao, se sim, com descricao
+    private String motivoFalta;
+    @ManyToOne // Muitas faltas para 1 aluno
+    @JoinColumn(name="idAluno", nullable = false)
+    private long aluno;
+    @ManyToOne
+    @JoinColumn(name="idAula", nullable = false)
+    private long aula;
 }

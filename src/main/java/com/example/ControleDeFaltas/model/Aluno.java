@@ -11,7 +11,7 @@ import java.util.Date;
 public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long idAluno;
     private String name;
     private String endereco;
     private Date dtNascimento;
